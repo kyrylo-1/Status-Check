@@ -36,12 +36,6 @@ yarn-error.log*
 *.userosscache
 *.sln.docstates
 
-# User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
-
-# Mono auto generated files
-mono_crash.*
-
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -86,3 +80,7 @@ bld/
 *.pidb
 *.svclog
 *.scc
+/StatusCheck.API/StatusCheck.API/.vscode
+/StatusCheck.API/.vs/StatusCheck.API/v16/TestStore/0
+/StatusCheck.API/.vs/StatusCheck.API/DesignTimeBuild
+/.vscode/settings.json
