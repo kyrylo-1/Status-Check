@@ -20,6 +20,14 @@ namespace StatusCheck.API
         {
             services.AddDbContext<StatusCheckContext>(opt => opt.UseSqlServer(Configuration["Data:StatusCheckAPIConnection:ConnectionString"]));
             services.AddControllers();
+
+            services.AddSwaggerDocument(config =>
+            {
+                config.PostProcess = document =>
+                {
+                    document.Info.Title = "StatusCheck API";
+                };
+            });
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -34,6 +42,9 @@ namespace StatusCheck.API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseOpenApi();
+            app.UseSwaggerUi3(sett => { sett.DocumentTitle = "StatusCheck";  });
 
             app.UseEndpoints(endpoints =>
             {

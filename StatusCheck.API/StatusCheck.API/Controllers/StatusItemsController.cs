@@ -20,16 +20,14 @@ namespace StatusCheck.API.Controllers
             _context = context;
         }
 
-        // GET: api/StatusItems
         [HttpGet]
         public async Task<ActionResult<IEnumerable<StatusItem>>> GetStatusItems()
         {
             return await _context.StatusItems.ToListAsync();
         }
 
-        // GET: api/StatusItems/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<StatusItem>> GetStatusItem(long id)
+        public async Task<ActionResult<StatusItem>> GetStatusItem(int id)
         {
             var statusItem = await _context.StatusItems.FindAsync(id);
 
@@ -41,9 +39,6 @@ namespace StatusCheck.API.Controllers
             return statusItem;
         }
 
-        // PUT: api/StatusItems/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStatusItem(long id, StatusItem statusItem)
         {
@@ -73,9 +68,6 @@ namespace StatusCheck.API.Controllers
             return NoContent();
         }
 
-        // POST: api/StatusItems
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<StatusItem>> PostStatusItem(StatusItem statusItem)
         {
@@ -85,9 +77,8 @@ namespace StatusCheck.API.Controllers
             return CreatedAtAction("GetStatusItem", new { id = statusItem.Id }, statusItem);
         }
 
-        // DELETE: api/StatusItems/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<StatusItem>> DeleteStatusItem(long id)
+        public async Task<ActionResult<StatusItem>> DeleteStatusItem(int id)
         {
             var statusItem = await _context.StatusItems.FindAsync(id);
             if (statusItem == null)
