@@ -84,3 +84,5 @@ bld/
 /StatusCheck.API/.vs/StatusCheck.API/v16/TestStore/0
 /StatusCheck.API/.vs/StatusCheck.API/DesignTimeBuild
 /.vscode/settings.json
+/client/.vscode/settings.json
+/client/src/generated

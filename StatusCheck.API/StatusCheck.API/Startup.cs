@@ -23,11 +23,10 @@ namespace StatusCheck.API
 
             services.AddSwaggerDocument(config =>
             {
-                config.PostProcess = document =>
-                {
-                    document.Info.Title = "StatusCheck API";
-                };
+                config.Title = "StatusCheck API";
             });
+
+            services.AddOpenApiDocument(document => document.DocumentName = "a");
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
