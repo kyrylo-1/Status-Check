@@ -1,14 +1,11 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
+import { StatusCreator } from './components/StatusCreator';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Status checker</p>
-      </header>
+      <StatusCreator />
     </div>
   );
-}
-
-export default App;
+};

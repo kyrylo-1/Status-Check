@@ -86,3 +86,4 @@ bld/
 /.vscode/settings.json
 /client/.vscode/settings.json
 /client/src/generated
+/client/node_modules
