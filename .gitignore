@@ -1,10 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
 # testing
 /coverage
 
@@ -87,3 +82,4 @@ bld/
 /client/.vscode/settings.json
 /client/src/generated
 /client/node_modules
+/StatusCheck.API/.vs/
