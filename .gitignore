@@ -83,3 +83,4 @@ bld/
 /client/src/generated
 /client/node_modules
 /StatusCheck.API/.vs/
+/client/build
